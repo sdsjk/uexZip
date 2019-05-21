@@ -52,8 +52,10 @@ public class EUExZip extends EUExBase {
 			return null;
 		}
 
+		//不支持../
 		return BUtility.makeRealPath(
-				BUtility.makeUrl(mBrwView.getCurrentUrl(), path),
+//				BUtility.makeUrl(mBrwView.getCurrentUrl(), path),
+				path,
 				mBrwView.getCurrentWidget().m_widgetPath,
 				mBrwView.getCurrentWidget().m_wgtType);
 
